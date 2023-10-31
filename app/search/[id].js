@@ -132,5 +132,5 @@ const JobSearch = () => {
         </SafeAreaView>
     )
 }
-hhhhhhh
+hhhhhh
 export default JobSearch
