@@ -8,12 +8,18 @@ import { Popularjobs } from "../components/home/popular/Popularjobs"
 import { Welcome } from "../components/home/welcome/Welcome"
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { ScreenHeaderBtn } from "../components/common/header/ScreenHeaderBtn"
+import { StatusBar } from "expo-status-bar";
 
 export const Home = () => {
   const router = useRouter();
   const [searchTerm, SetSearchTerm] = useState("")
   return (
+    
     <SafeAreaView style={{ flex: '1', backgroundColor: 'COLORS.lightWhite' }}>
+      <View>
+        <StatusBar style="auto" />
+      </View>
+     
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: 'COLORS.lightWhite' },
@@ -61,3 +67,4 @@ export const Home = () => {
 };
 
 export default Home;
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
