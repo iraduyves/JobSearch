@@ -14,10 +14,10 @@ export const Home = () => {
   const router = useRouter();
   const [searchTerm, SetSearchTerm] = useState("")
   return (
-    
+    <>
+    <StatusBar style="auto" />
     <SafeAreaView style={{ flex: '1', backgroundColor: 'COLORS.lightWhite' }}>
       <View>
-        <StatusBar style="auto" />
       </View>
      
       <Stack.Screen
@@ -62,7 +62,7 @@ export const Home = () => {
 
 
     </SafeAreaView>
-
+    </>
   );
 };
 

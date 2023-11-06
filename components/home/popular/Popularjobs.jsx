@@ -12,7 +12,7 @@ import { useFetch } from '../../../hook/userFetch'
 
 export const Popularjobs = () => {
   const router = useRouter();
-  const { data, isLoading, error } = useFetch('search',{query:'java developer',num_pages:1})
+  const { data, isLoading, error } = useFetch('search',{query:'php developer in USA',num_pages:1})
   // console.log(data);
 
   return (

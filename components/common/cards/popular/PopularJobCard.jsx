@@ -5,7 +5,7 @@ import { checkImageURL } from "../../../../utils";
 import { useFetch } from "../../../../hook/userFetch";
 
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
-  const { data, isLoading, error } = useFetch('search',{query:'java developer',num_pages:1})
+  const { data, isLoading, error } = useFetch('search',{query:'php developer in USA',num_pages:1})
   // {data?.map ((item,index)=>(
   //     console.log(item?.employer_logo)
   //     ))}
