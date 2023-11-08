@@ -49,7 +49,7 @@ export const useFetch = (endpoint, query) => {
         } finally {
             SetIsLoading(false)
         }
-        jjjjjjjjjjjjj
+        jjjjjjjjjjjj
     useEffect(() => {
         FetchData();
     }, []);
