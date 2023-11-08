@@ -49,6 +49,7 @@ export const useFetch = (endpoint, query) => {
         } finally {
             SetIsLoading(false)
         }
+        jjj
     useEffect(() => {
         FetchData();
     }, []);
