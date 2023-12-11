@@ -14,8 +14,7 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
 
   return (
     data?.map((job) => (
-      
-      // console.log(job?.job_title),
+
       <TouchableOpacity
         style={styles.container(selectedJob, item)}
         onPress={() => handleCardPress(item)}

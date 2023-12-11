@@ -29,7 +29,7 @@ export const useFetch = (endpoint, query) => {
         try {
             const response = await axios(options);
 
-            SetData(response.data.data);
+            SetData(response?.data?.data);
             console.log(data);
             SetIsLoading(false)
 
@@ -63,5 +63,7 @@ export const useFetch = (endpoint, query) => {
     return { data, isLoading, error, refetch };
 
 }
-export default useFetch
+}
+export default useFetch;
 
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh

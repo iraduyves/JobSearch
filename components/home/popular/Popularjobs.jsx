@@ -15,6 +15,8 @@ export const Popularjobs = () => {
   const { data, isLoading, error } = useFetch('search',{query:'php developer in USA',num_pages:1})
   // console.log(data);
 
+  const dataa = [1,2,3,4]
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -32,13 +34,13 @@ export const Popularjobs = () => {
           // data?.map((job) => (
           //   console.log(job.employer_name))),
           <FlatList
-            data={[1, 2, 3, 4]}
-            renderItem={({ item }) => (
-              <PopularJobCard item={item} />
-            )}
+            data={dataa}
             keyExtractor={item => item?.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
             horizontal
+            renderItem={({ item }) => (
+              <PopularJobCard item={item} />
+            )}
           />
         )
          
