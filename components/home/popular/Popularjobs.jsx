@@ -1,53 +1,64 @@
-import { useState } from 'react'
-import { View, Text, FlatList } from 'react-native'
+import { useState } from "react";
+import { useRouter } from "expo-router";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  FlatList,
+  ActivityIndicator,
+} from "react-native";
 
-import styles from './popularjobs.style'
-import { useRouter } from 'expo-router'
-import { TouchableOpacity } from 'react-native'
-import { ActivityIndicator } from 'react-native'
-import { COLORS, SIZES } from '../../../constants'
-import PopularJobCard from '../../common/cards/popular/PopularJobCard'
-import { useFetch } from '../../../hook/userFetch'
-
+import styles from "./popularjobs.style";
+import { COLORS, SIZES } from "../../../constants";
+import PopularJobCard from "../../common/cards/popular/PopularJobCard";
+import useFetch from "../../../hook/userFetch";
 
 export const Popularjobs = () => {
   const router = useRouter();
-  const { data, isLoading, error } = useFetch('search',{query:'php developer in USA',num_pages:1})
-  // console.log(data);
+  const { data, isLoading, error } = useFetch("search", {
+    query: "React developer",
+    num_pages: "1",
+  });
 
-  const dataa = [1,2,3,4]
+  const [selectedJob, setSelectedJob] = useState();
+
+  const handleCardPress = (item) => {
+    router.push(`/job-details/${item.job_id}`);
+    setSelectedJob(item.job_id);
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Popularjobs</Text>
+        <Text style={styles.headerTitle}>Popular jobs</Text>
         <TouchableOpacity>
           <Text style={styles.headerBtn}>Show all</Text>
         </TouchableOpacity>
       </View>
+
       <View style={styles.cardsContainer}>
         {isLoading ? (
-          <ActivityIndicator size='large' colors={COLORS.primary} />
+          <ActivityIndicator size='large' color={COLORS.primary} />
         ) : error ? (
-          <Text>Something Went Wrong</Text>
-        ) :(
-          // data?.map((job) => (
-          //   console.log(job.employer_name))),
+          <Text>Something went wrong</Text>
+        ) : (
           <FlatList
-            data={dataa}
-            keyExtractor={item => item?.job_id}
+            data={data}
+            renderItem={({ item }) => (
+              <PopularJobCard
+                item={item}
+                selectedJob={selectedJob}
+                handleCardPress={handleCardPress}
+              />
+            )}
+            keyExtractor={(item) => item.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
             horizontal
-            renderItem={({ item }) => (
-              <PopularJobCard item={item} />
-            )}
           />
-        )
-         
-        }
+        )}
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default Popularjobs
+export default Popularjobs;
