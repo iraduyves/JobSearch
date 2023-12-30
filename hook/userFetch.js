@@ -45,4 +45,4 @@ const useFetch = (endpoint, query) => {
 };
 
 export default useFetch;
-jfgdgfhjkl;lghffghjkkg
+jfgdgfhjkl;lghffghjkk
