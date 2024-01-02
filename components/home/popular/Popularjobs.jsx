@@ -12,6 +12,7 @@ import styles from "./popularjobs.style";
 import { COLORS, SIZES } from "../../../constants";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 import useFetch from "../../../hook/userFetch";
+import { SectionList } from "react-native-web";
 
 export const Popularjobs = () => {
   const router = useRouter();
@@ -26,8 +27,40 @@ export const Popularjobs = () => {
     router.push(`/job-details/${item.job_id}`);
     setSelectedJob(item.job_id);
   };
-
+  // const DATA = [
+  //   {
+  //     title: 'Main dishes',
+  //     data: ['Pizza', 'Burger', 'Risotto'],
+  //   },
+  //   {
+  //     title: 'Sides',
+  //     data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
+  //   },
+  //   {
+  //     title: 'Drinks',
+  //     data: ['Water', 'Coke', 'Beer'],
+  //   },
+  //   {
+  //     title: 'Desserts',
+  //     data: ['Cheese Cake', 'Ice Cream'],
+  //   },
+  // ];
   return (
+    <>
+
+    {/* <SectionList
+        
+        sections={DATA}
+        keyExtractor={(item,index)=>item+index}
+        renderItem={(item)=>(
+          <View>{item}</View>
+        )}
+        renderSectionHeader={({section:{title}})=>(
+          <Text>{title}</Text>
+        )}
+    /> */}
+
+    
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Popular jobs</Text>
@@ -58,7 +91,10 @@ export const Popularjobs = () => {
         )}
       </View>
     </View>
+
+    </>
   );
 };
 
 export default Popularjobs;
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
