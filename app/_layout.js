@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { NavigationContainer } from "@react-navigation/native";
 // import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./index"; // Import the Home component
@@ -10,6 +10,8 @@ import * as SplashScreen from 'expo-splash-screen'
 // const Stack = createStackNavigator();
 
 function Layout() {
+  const[name,setName]=useState("")
+  
   const [fontsLoaded]=useFonts({
     DMBold:require('../assets/fonts/DMSans-Bold.ttf'),
     DMMedium:require('../assets/fonts/DMSans-Medium.ttf'),

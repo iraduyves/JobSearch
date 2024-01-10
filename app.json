@@ -4,10 +4,29 @@
     "web": {
       "bundler": "metro"
     },
+    "orientation": "portrait",
+    "icon": "./assets/search-icon-png-32.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/mobsearch.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "plugins": [
       "expo-router"
     ],
     "name": "mobile-job-search-app",
-    "slug": "mobile-job-search-app"
+    "slug": "mobile-job-search-app",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "34b75dc2-d945-4ad7-851c-0fa3da399c02"
+      }
+    },
+    "android": {
+      "package": "com.yvesiradukunda.mobilejobsearchapp"
+    }
   }
 }
