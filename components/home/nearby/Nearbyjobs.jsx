@@ -41,4 +41,4 @@ export const Nearbyjobs = () => {
 };
 
 export default Nearbyjobs;
-dkewrheufhjadDSK
+dkewrheufhjadDS
