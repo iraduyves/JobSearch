@@ -41,5 +41,3 @@ export const Nearbyjobs = () => {
 };
 
 export default Nearbyjobs;
-
-hhhjjjjjjjjjjjjjj
