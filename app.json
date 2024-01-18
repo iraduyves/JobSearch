@@ -27,6 +27,13 @@
     },
     "android": {
       "package": "com.yvesiradukunda.mobilejobsearchapp"
-    }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/34b75dc2-d945-4ad7-851c-0fa3da399c02"
+    },
+    "ios": {}
   }
 }
