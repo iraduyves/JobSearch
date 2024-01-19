@@ -65,4 +65,3 @@ export const Welcome = ({searchTerm,SetSearchTerm,handleclick}) => {
 
 // export default Welcome
 
-n
