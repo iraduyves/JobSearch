@@ -52,7 +52,7 @@ export const Welcome = ({searchTerm,SetSearchTerm,handleclick}) => {
           }}
           >
 
-            jhjvghbjkl
+            jhjvghbjk
             <Text style={styles.tabText(activeJobType,item)}>{item}</Text>
           </TouchableOpacity>
          )}
