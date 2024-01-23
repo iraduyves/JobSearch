@@ -51,8 +51,6 @@ export const Welcome = ({searchTerm,SetSearchTerm,handleclick}) => {
             router.push(`/search/${item}`)
           }}
           >
-i
-            
             <Text style={styles.tabText(activeJobType,item)}>{item}</Text>
           </TouchableOpacity>
          )}
